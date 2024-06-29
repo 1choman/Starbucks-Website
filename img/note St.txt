@@ -1,0 +1,562 @@
+html
+----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="Starbucks.css">
+    <link rel="icon" href="img/Starbucks_logo.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""> </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>At Starbucks, we’re dedicated to more than coffee. Our mission is to inspire and nurture the human spirit—one
+                     person, one cup, and one neighborhood at a time. We provide high-quality coffee experiences, foster connections,
+                      and positively impact our communities. Join us for a unique coffee journey and discover the Starbucks difference.
+                    </p>
+                 <a href="https://www.google.com/search?sca_esv=8b4a0b2f1f186285&sxsrf=ADLYWILPNME_3H3TMTvePqJ993k-vMeOww:1718144055293&q=starbucks&uds=ADvngMjbVIL5kUe9wrhEWDFS7qEgVpCoJmFbZe-jv_7Di-jKtEZVv47N80EjxrdaqruQrKbCCH4n&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3JxdWbs3CkcdlHyEbrNaWhouVL7BsYfOLd4cOi-s64_o14AUX2sxPzQWcV8jxmtnt-VccSoL4r7e5cHxT78NVp9TKqqkf1VRo1Gssr6InfeQrDntKQWKPyEaxy4oWXmPVUTHgCMI0srRLHoEcvnbImCSMPk43&sa=X&ved=2ahUKEwiTwdqwydSGAxVPSfEDHaLkCMkQtKgLegQIDhAB&biw=1280&bih=593&dpr=1.5#vhid=pPpqeuR13wn0_M&vssid=mosaic" target="_blank">Learn More</a>
+
+                 <button id="chooseIceDrinkButton" onclick="openNewPage()">Choose Your Ice Drink</button>
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')" ></li>
+            <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')" ></li>
+            <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#d752b1')" ></li>
+            <li><img src="img/thumb0.png" onclick="imgSlider('img/img04.png');changeCircleColor(' rgb(221, 166, 132)')" ></li>
+        </ul>
+        
+        <ul class="sci">
+            <li><a href="#"><img src="./img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+   
+<script src="Starbucks.js"></script>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------
+css
+-------------------------------
+@import url('https://fonts.googleapis.com/css? family=Poppins: 200, 300,400, 500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    margin-top: -4px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 1px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+    margin-left: 40px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+header li a:hover {
+     color: #017143;
+     background-color: #e0f7fa;
+     border-radius: 5px;
+     transform: translateY(-3px) scale(1.2);
+    }
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+.content .textBox h2 {
+    color: #333;
+    font-size: 3rem;
+    line-height: 1.4em;
+    font-weight: 500;
+
+}
+.content .textBox h2 span {
+    color: #017143;
+    font-size: 1em;
+    font-weight: 900;
+}
+.content .textBox p {
+    color: #333;
+}
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
+}
+.content .textBox a:hover {
+    background: #014d32; 
+    transform: scale(1.1);
+}
+
+
+#chooseIceDrinkButton {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 14px;
+    background: #017143;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+#chooseIceDrinkButton:hover {
+    background: #014d32;
+    transform: scale(1.1);
+}
+
+
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: -50px;
+    margin-top: 50px;
+
+}
+.content .imgBox img {
+    max-width: 340px;
+}
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 135px; /* Adjust this value to move the thumbnails higher */
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10; /* Ensure thumbnails are above other content if needed */
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+.thumb li img {
+    max-width: 50px;
+}
+
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease, transform 0.5s ease;
+}
+.sci li a:hover {
+    transform: scale(0.8) rotate(360deg);
+    filter: invert(0.1);
+}
+
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------
+css form
+--------------
+/* form-style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/images1.png');
+    margin: 0;
+    padding: 20px;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+h1 {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    color: #014d32; 
+    animation: slideDown 8s linear;
+}
+
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #017143;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+}
+
+button:hover {
+    background-color: #014d32;
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+---------------------------------------------------------------------------------
+javascript
+---------------
+function imgSlider(anything) {
+    document.querySelector('.starbucks').src = anything;
+}
+
+function changeCircleColor(color) {
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+}
+
+function openNewPage() {
+    var formPage = window.open("", "_blank");
+
+    formPage.document.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Order Form</title>
+            <link rel="stylesheet" href="form-style.css">
+        </head>
+        <body>
+            <h1>Order Now Instantly Elevate Your Experience</h1>
+            <form action="submit.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="drink">Choose Your Ice Drink:</label>
+                <select id="drink" name="drink">
+                    <option value="Peppermint White Chocolate Crème Frappuccino">Peppermint White Chocolate Crème Frappuccino</option>
+                    <option value="Peppermint White Chocolate Frappuccino">Peppermint White Chocolate Frappuccino</option>
+                    <option value="White Chocolate Mocha Frappuccino">White Chocolate Mocha Frappuccino</option>
+                    <option value="Peppermint">Peppermint White Chocolate Crème Frappuccino</option>
+                </select><br><br>
+                <label for="payment">Choose Your Payment Method:</label>
+<select id="payment" name="payment">
+    <option value="visacard">Visa Card</option>
+    <option value="qicard">Qi Card</option>
+    <option value="fastpay">FastPay</option>
+</select>
+
+                <button type="submit">Order Now</button>
+                
+            </form>
+        </body>
+        </html>
+    `);
+}
+
+
+html.dark body.bg-light- d
+html body.bg-light-100.dark\:bg-dark-300 div.re
+
+
+V<div h-auto flex justify-between items-center px-5 flex-wrap flex-row-reverse md:flex-nowrap flex-row"
+
+
+
+
+
+
+
+
+
+light dark mode
+
+html
+-------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light-100">
+    <div class="flex justify-center items-center min-h-screen">
+        <div>
+            <h1 class="text-gray-800 dark:text-gray-200 mb-5">Toggle Light/Dark Mode</h1>
+            <button id="modeToggle" class="toggle-btn" onclick="toggleDarkMode()">
+                <img src="./img/sunB.png" alt="Sun" class="icon sun-icon">
+                <img src="./img/moon.png" alt="Moon" class="icon moon-icon hidden">
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+---------------------------------------------------------------
+css
+------------
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-light-100 {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.toggle-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+body.dark .toggle-btn {
+    background: #ffffff;
+}
+
+.icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.moon-icon {
+    opacity: 0;
+    transform: rotate(-180deg);
+}
+
+body.dark .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+body.dark .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes rotate-sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate-moon {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+body.dark .sun-icon {
+    animation: rotate-sun 0.3s ease;
+}
+
+body.dark .moon-icon {
+    animation: rotate-moon 0.3s ease;
+}
+
+body:not(.dark) .sun-icon {
+    animation: rotate-sun 0.3s ease reverse;
+}
+
+body:not(.dark) .moon-icon {
+    animation: rotate-moon 0.3s ease reverse;
+}
+----------------------------------------------------------------------
+java
+-------------
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+    document.documentElement.classList.toggle('dark');
+
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    
+    if (document.body.classList.contains('dark')) {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+    } else {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+    }
+}

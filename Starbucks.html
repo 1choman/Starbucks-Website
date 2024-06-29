@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="Starbucks.css">
+    <link rel="icon" href="img/Starbucks_logo.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""> </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button id="modeToggle" onclick="toggleDarkMode()">Dark Mode</button>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>At Starbucks, we’re dedicated to more than coffee. Our mission is to inspire and nurture the human spirit—one
+                     person, one cup, and one neighborhood at a time. We provide high-quality coffee experiences, foster connections,
+                      and positively impact our communities. Join us for a unique coffee journey and discover the Starbucks difference.
+                    </p>
+                 <a href="https://www.google.com/search?sca_esv=8b4a0b2f1f186285&sxsrf=ADLYWILPNME_3H3TMTvePqJ993k-vMeOww:1718144055293&q=starbucks&uds=ADvngMjbVIL5kUe9wrhEWDFS7qEgVpCoJmFbZe-jv_7Di-jKtEZVv47N80EjxrdaqruQrKbCCH4n&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3JxdWbs3CkcdlHyEbrNaWhouVL7BsYfOLd4cOi-s64_o14AUX2sxPzQWcV8jxmtnt-VccSoL4r7e5cHxT78NVp9TKqqkf1VRo1Gssr6InfeQrDntKQWKPyEaxy4oWXmPVUTHgCMI0srRLHoEcvnbImCSMPk43&sa=X&ved=2ahUKEwiTwdqwydSGAxVPSfEDHaLkCMkQtKgLegQIDhAB&biw=1280&bih=593&dpr=1.5#vhid=pPpqeuR13wn0_M&vssid=mosaic" target="_blank">Learn More</a>
+
+                 <button id="chooseIceDrinkButton" onclick="openNewPage()">Choose Your Ice Drink</button>
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')" ></li>
+            <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')" ></li>
+            <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#d752b1')" ></li>
+            <li><img src="img/thumb0.png" onclick="imgSlider('img/img04.png');changeCircleColor(' rgb(221, 166, 132)')" ></li>
+        </ul>
+        
+        <ul class="sci">
+            <li><a href="#"><img src="./img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+<script src="Starbucks.js"></script>
+</body>
+</html>

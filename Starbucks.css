@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    transition: background 0.5s, color 0.5s;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+body.dark-mode section {
+    background: #444;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+    margin-left: 40px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode header ul li a {
+    color: #fff;
+}
+
+header li a:hover {
+    color: #017143;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    transform: translateY(-3px) scale(1.2);
+}
+
+body.dark-mode header li a:hover {
+    background-color: #333;
+    color: #017143;
+}
+
+header #modeToggle {
+    background: #017143;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header #modeToggle:hover {
+    background: #014d32;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    color: #333;
+    font-size: 3rem;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+body.dark-mode .content .textBox h2 {
+    color: #fff;
+}
+
+.content .textBox h2 span {
+    color: #017143;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+.content .textBox p {
+    color: #333;
+}
+
+body.dark-mode .content .textBox p {
+    color: #fff;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.content .textBox a:hover {
+    background: #014d32; 
+    transform: scale(1.1);
+}
+
+#chooseIceDrinkButton {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 14px;
+    background: #017143;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+#chooseIceDrinkButton:hover {
+    background: #014d32;
+    transform: scale(1.1);
+}
+
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: -50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 340px;
+}
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 135px;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 50px;
+}
+
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease, transform 0.5s ease;
+}
+
+.sci li a:hover {
+    transform: scale(0.8) rotate(360deg);
+    filter: invert(0.1);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+
+body.dark-mode .circle {
+    background: #222;
+}
